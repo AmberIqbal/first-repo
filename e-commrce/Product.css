@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-details img {
+  max-width: 300px;
+}

@@ -1,0 +1,57 @@
+.container {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #dddddd;
+  right: 0;
+  visibility: visible;
+  transform: translate3d(-100%, 0, 0);
+  display: block;
+  position: fixed;
+  transition: 0.25s;
+  will-change: transform;
+  overflow: auto;
+  left: 100%;
+}
+.box {
+  display: flex;
+  border: 1px solid #dddddd;
+
+  align-items: center;
+  justify-content: space-around;
+}
+h1 {
+  text-align: left;
+}
+.close {
+  position: absolute;
+  right: 19px;
+  top: 1rem;
+  color: black;
+  padding: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.box-rect {
+  width: 400px;
+  height: 450px;
+}
+.box-rect p {
+  text-align: center;
+  padding: 183px 50px;
+}
+
+.back-btn {
+  width: 350px;
+  padding: 10px 18px;
+  background-color: rgb(31, 175, 62);
+  color: white;
+  margin: 20px;
+  align-items: center;
+  border-radius: 10px;
+  border-color: rgb(31, 175, 62);
+  text-align: center;
+}
+.btn6:hover {
+  background-color: rgb(24, 170, 24);
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="Contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="lg_color">
+        <a href="e-commerce.html">
+          <img
+            class="lg"
+            src="E:\Amber\practice-scripts\downloaded_pics\organic-store-logo-with-a-shop-and-broccoli-for-any-business-especially-for-retail-organic-store-wholesale-groceries-organic-shop-cafe-etc-vector.jpg"
+            width="400px"
+            height="200px"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <div class="topnav1">
+        <a href="Everything.html">Everything</a>
+        <a href="Groceries.html"> Groceries</a>
+        <a href="About.html">About</a>
+
+        <div class="topnav_right">
+          <a href="Contact.html">Contact</a>
+          <a href="Cart.html">Cart</a>
+          <a href="Login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div>
+        <h1>GET IN TOUCH</h1>
+        <img
+          class="logo01"
+          src="E:\Amber\practice-scripts\downloaded_pics\pngtree-leaf-logo-design-icon-vector-png-image_1295845.jpg"
+          width="200px"
+          height="200px"
+          alt="image"
+        />
+      </div>
+
+      <div class="flex">
+        <div class="flex-box1">
+          <i style="font-size: 24px; color: green" class="fa">&#xf095;</i>
+          <p>
+            +123 456 7890<br />
+            +123 456 7890
+          </p>
+        </div>
+        <div class="flex-box2">
+          <i style="font-size: 24px; color: green" class="fa">&#xf0e0;</i>
+          <p>
+            info@example.com<br />
+            support@example.com
+          </p>
+        </div>
+        <div class="flex-box3">
+          <i style="font-size: 24px; color: green" class="fa">&#xf041;</i>
+          <p>
+            1569 Ave, New York,<br />
+            NY 10028, USA
+          </p>
+        </div>
+      </div>
+      <div class="FAQ">
+        <h2>Frequently Asked Question!</h2>
+        <img
+          class="logo02"
+          src="E:\Amber\practice-scripts\downloaded_pics\pngtree-leaf-logo-design-icon-vector-png-image_1295845.jpg"
+          width="200px"
+          height="200px"
+          alt="image"
+        />
+      </div>
+      <div class="questions-box">
+        <div class="one">
+          <div class="q1">
+            <p>
+              Pulvinar nostrud class cum facilis?<span>
+                <i class="fa fa-caret-right" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div class="hide1">
+            <p>
+              I am item content. Click edit button to change this<br />
+              text. Lorem ipsum dolor sit amet, consectetur<br />
+              adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+              pulvinar leo.
+            </p>
+          </div>
+          <div class="q2">
+            <p>
+              Pon excepturi numquam, facilis?<span>
+                <i class="fa fa-caret-right" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div class="hide2">
+            <p>
+              I am item content. Click edit button to change this<br />
+              text. Lorem ipsum dolor sit amet, consectetur<br />
+              adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+              pulvinar leo.
+            </p>
+          </div>
+        </div>
+        <div class="two">
+          <div class="q3">
+            <p>
+              Pon excepturi numquam, facilis?<span>
+                <i class="fa fa-caret-right" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div class="hide3">
+            <p>
+              I am item content. Click edit button to change this<br />
+              text. Lorem ipsum dolor sit amet, consectetur<br />
+              adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+              pulvinar leo.
+            </p>
+          </div>
+          <div class="q4">
+            <p>
+              Pon excepturi numquam, facilis?<span>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </span>
+            </p>
+          </div>
+          <div class="hide4">
+            <p>
+              I am item content. Click edit button to change this<br />
+              text. Lorem ipsum dolor sit amet, consectetur <br />adipiscing
+              elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar leo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var q1 = document.getElementsByClassName("q1");
+      var i;
+
+      for (i = 0; i < q1.length; i++) {
+        q1[i].onclick = function () {
+          this.nextElementSibling.classList.toggle("show");
+          this.firstChild.classList.toggle("fa-caret-right");
+          this.firstChild.classList.toggle("fa-caret-down");
+        };
+      }
+
+      var q2 = document.getElementsByClassName("q2");
+      var i;
+
+      for (i = 0; i < q2.length; i++) {
+        q2[i].onclick = function () {
+          this.nextElementSibling.classList.toggle("show");
+          this.firstChild.classList.toggle("fa-caret-right");
+          this.firstChild.classList.toggle("fa-caret-down");
+        };
+      }
+      var q3 = document.getElementsByClassName("q3");
+      var i;
+
+      for (i = 0; i < q3.length; i++) {
+        q3[i].onclick = function () {
+          this.nextElementSibling.classList.toggle("show");
+          this.firstChild.classList.toggle("fa-caret-right");
+          this.firstChild.classList.toggle("fa-caret-down");
+        };
+      }
+      var q4 = document.getElementsByClassName("q4");
+      var i;
+
+      for (i = 0; i < q4.length; i++) {
+        q4[i].onclick = function () {
+          this.nextElementSibling.classList.toggle("show");
+          this.firstChild.classList.toggle("fa-caret-right");
+          this.firstChild.classList.toggle("fa-caret-down");
+        };
+      }
+    </script>
+  </body>
+  <footer>
+    <div class="fc6">
+      <div class="box12">
+        <a href="e-commerce.html">
+          <img
+            class="change-bg"
+            src="E:\Amber\practice-scripts\downloaded_pics\organic-store-logo-with-a-shop-and-broccoli-for-any-business-especially-for-retail-organic-store-wholesale-groceries-organic-shop-cafe-etc-vector.jpg"
+            width="300px"
+            height="200px"
+            alt="logo"
+          />
+        </a>
+        <p>
+          Maecenas mi justo, interdum at consectetur vel, tristique et arcu. Ut
+          quis eros blandit, ultrices diam in, elementum ex. Suspendisse quis
+          faucibus urna. Suspendisse pellentesque.
+        </p>
+      </div>
+      <div class="box13">
+        <div class="l9">
+          <h3>Quick Links</h3>
+          <a class="l10" href="e-commerce.html">About</a><br />
+          <a class="l11" href="e-commerce.html">Cart</a><br />
+          <a class="l12" href="e-commerce.html">Checkout</a><br />
+          <a class="l13" href="e-commerce.html">Home</a><br />
+          <a class="l14" href="e-commerce.html">My Account</a><br />
+          <a class="l15" href="e-commerce.html">Shop</a>
+        </div>
+        <div class="l16">
+          <h3>Site Links</h3>
+          <a class="l17" href="e-commerce.html">Privacy Policy</a><br />
+          <a class="l18" href="e-commerce.html">Shipping Details</a><br />
+          <a class="l19" href="e-commerce.html">Offers Coupons</a><br />
+          <a class="l20" href="e-commerce.html">Terms & Condions</a>
+        </div>
+      </div>
+      <div class="box14">
+        <div>
+          <h3>Download Our Mobile App</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            aliquam gravida sollicitudin. Praesent porta enim mi, non tincidunt
+            libero interdum sit amet.
+          </p>
+        </div>
+        <div class="l21">
+          <h3>Quick Links</h3>
+          <a class="l22" href="e-commerce.html">Know More About Us</a><br />
+          <a class="l23" href="e-commerce.html">Visit Store</a><br />
+          <a class="l24" href="e-commerce.html">Let's Connect</a><br />
+          <a class="l25" href="e-commerce.html">Locate Stores</a>
+        </div>
+        <div class="fc7">
+          <div class="s1">
+            <img
+              src="E:\Amber\practice-scripts\downloaded_pics\play-store.png"
+              width="120px"
+              height="40px"
+            />
+          </div>
+          <div class="s2">
+            <img
+              src="E:\Amber\practice-scripts\downloaded_pics\app-store.png"
+              width="120px"
+              height="40px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fc8">
+      <div><p>Copyright © 2024 | Organic Store</p></div>
+      <div class="logo2">
+        <div class="l26">
+          <a href="http://facebook.com">
+            <span class="fa fa-facebook"></span>
+          </a>
+        </div>
+        <div class="l27">
+          <a href="http://instagram.com">
+            <span class="fa fa-instagram"></span>
+          </a>
+        </div>
+        <div class="l28">
+          <a href="http://twitter.com">
+            <span class="fa fa-twitter"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

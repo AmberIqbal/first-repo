@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Result-Wine</title>
+    <link rel="stylesheet" href="Wine.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="productDetails">
+      <img id="product-image" src="" alt="Product Image" />
+      <h2 id="product-name"></h2>
+      <p id="product-description"></p>
+      <p id="product-price"></p>
+    </div>
+    <script>
+      const productData = localStorage.getItem("element");
+
+      const selectedData = JSON.parse(productData);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.lg_color {
+  background-color: rgb(250, 244, 244);
+}
+.lg {
+  mix-blend-mode: multiply;
+}
+
+.topnav1 {
+  background-color: rgb(250, 244, 244);
+  overflow: hidden;
+}
+.topnav1 a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav1 a:hover {
+  background-color: rgb(250, 244, 244);
+  color: rgb(17, 173, 51);
+}
+
+.topnav_right {
+  float: right;
+}
+h1 {
+  text-align: center;
+  background-color: rgb(250, 244, 244);
+  font-size: 50px;
+  font-family: serif;
+  padding: 70px;
+  padding-bottom: 200px;
+}
+.logo01 {
+  display: block;
+  margin-left: auto;
+  margin-top: -200px;
+  margin-right: auto;
+  transform: rotate(20deg);
+  mix-blend-mode: multiply;
+}
+
+.flex {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: -90px;
+  border-radius: 10px;
+  gap: 20px;
+  align-items: center;
+  padding: 40px;
+  height: 250px;
+  width: 1000px;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.flex-box1 {
+  border: 1px solid rgb(163, 158, 158);
+  align-items: center;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+}
+.fa {
+  padding: 10px;
+}
+.flex-box1 p {
+  text-align: center;
+  padding: 20px;
+}
+.flex-box2 {
+  border: 1px solid rgb(163, 158, 158);
+  align-items: center;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+}
+.fa {
+  padding: 10px;
+}
+.flex-box2 p {
+  text-align: center;
+  padding: 20px;
+}
+.flex-box3 {
+  border: 1px solid rgb(163, 158, 158);
+  align-items: center;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+}
+.fa {
+  padding: 10px;
+}
+.flex-box3 p {
+  text-align: center;
+  padding: 20px;
+}
+.FAQ {
+  text-align: center;
+
+  font-size: 30px;
+  font-family: serif;
+  padding: 70px;
+  padding-bottom: 100px;
+}
+.questions-box {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  width: 1000px;
+  height: 250px;
+  flex-direction: row;
+  padding: 30px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.fa {
+  width: 20px;
+}
+.one {
+  width: 400px;
+}
+.q1 {
+  cursor: pointer;
+  border-bottom: 1px solid rgb(182, 179, 179);
+  padding: 10px;
+  transition: all 2s;
+}
+.q1-active {
+  height: 100px;
+}
+.q1 p {
+  font-weight: 900;
+  font-size: 20px;
+}
+.hide1 {
+  display: none;
+}
+.hide1.show {
+  display: block;
+  margin-right: 20px;
+}
+
+.fa {
+  width: 20px;
+}
+
+.q2 {
+  cursor: pointer;
+  border-bottom: 1px solid rgb(182, 179, 179);
+  padding: 10px;
+}
+.q2 p {
+  font-weight: 900;
+  font-size: 20px;
+}
+.hide2 {
+  display: none;
+}
+.hide2.show {
+  display: block;
+  margin-right: 20px;
+}
+.two {
+  width: 500px;
+}
+.fa {
+  width: 20px;
+}
+
+.q3 {
+  cursor: pointer;
+  border-bottom: 1px solid rgb(182, 179, 179);
+  padding: 10px;
+}
+.q3 p {
+  font-weight: 900;
+  font-size: 20px;
+}
+.hide3 {
+  display: none;
+}
+.hide3.show {
+  display: block;
+  margin-right: 20px;
+}
+
+.fa {
+  width: 20px;
+}
+
+.q4 {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid rgb(182, 179, 179);
+}
+.q4 p {
+  font-weight: 900;
+  font-size: 20px;
+}
+.hide4 {
+  display: none;
+}
+.hide4.show {
+  display: block;
+  margin-right: 40px;
+}
+.fc6 {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  background-color: #111111;
+  padding: 50px;
+}
+.box12 {
+  width: 350px;
+  height: 350px;
+  padding: 30px;
+}
+.change-bg {
+  mix-blend-mode: multiply;
+  filter: contrast(2);
+  padding: 20px;
+}
+.box12 p {
+  color: rgb(223, 211, 211);
+  text-align: left;
+  padding: 20px;
+  font-size: 18px;
+}
+.box13 {
+  width: 350px;
+  height: 400px;
+  padding: 30px;
+}
+.box13 h3 {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  padding: 25px;
+}
+.l9 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.l10 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l10:hover {
+  color: white;
+}
+.l11 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l11:hover {
+  color: white;
+}
+.l12 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l12:hover {
+  color: white;
+}
+.l13 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l13:hover {
+  color: white;
+}
+.l14:hover {
+  color: white;
+}
+.l14 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l15 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l15:hover {
+  color: white;
+}
+.l17 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l17:hover {
+  color: white;
+}
+.l18 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l18:hover {
+  color: white;
+}
+
+.l19 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l19:hover {
+  color: white;
+}
+.l20 {
+  color: rgb(223, 211, 211);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l20:hover {
+  color: white;
+}
+
+.l22 {
+  color: rgb(12, 104, 25);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l22:hover {
+  color: rgb(18, 190, 55);
+}
+.l23 {
+  color: rgb(12, 104, 25);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l23:hover {
+  color: rgb(18, 190, 55);
+}
+.l24 {
+  color: rgb(12, 104, 25);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l24:hover {
+  color: rgb(18, 190, 55);
+}
+.l25 {
+  color: rgb(12, 104, 25);
+  text-decoration: none;
+  font-size: 18px;
+}
+.l25:hover {
+  color: rgb(18, 190, 55);
+}
+.box14 {
+  width: 350px;
+  height: 400px;
+  padding: 30px;
+}
+.box14 h3 {
+  color: rgb(248, 248, 248);
+  text-align: center;
+  font-size: 25px;
+  padding: 25px;
+}
+.box14 p {
+  color: rgb(223, 211, 211);
+  text-align: left;
+  font-size: 18px;
+}
+.fc7 {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  padding: 25px;
+}
+.fc8 {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  background-color: #111111;
+  border-top-color: white;
+
+  padding: 40px;
+}
+.fc8 p {
+  color: rgb(223, 211, 211);
+}
+.logo2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.fa {
+  color: rgb(94, 94, 95);
+}
+
+.fa:hover {
+  color: rgb(21, 199, 36);
+}

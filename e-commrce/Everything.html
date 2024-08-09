@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Everything</title>
+    <link rel="stylesheet" href="Everything.css" />
+    <link
+      rel="stylesheet"
+      id="font-awesome-5-all-css"
+      href="https://websitedemos.net/organic-shop-02/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.21.6"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header class="nav-flex">
+      <div class="topnav01">
+        <a href="e-commerce.html">
+          <img
+            class="lg1"
+            src="E:\Amber\practice-scripts\downloaded_pics\organic-store-logo-with-a-shop-and-broccoli-for-any-business-especially-for-retail-organic-store-wholesale-groceries-organic-shop-cafe-etc-vector.jpg"
+            width="250px"
+            height="100px"
+            alt="logo"
+          />
+        </a>
+
+        <a href="Everything.html">Everything</a>
+        <a href="Groceries.html"> Groceries</a>
+      </div>
+      <div class="topnav0_right">
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Cart.html">Cart</a>
+        <a href="Login.html">Login</a>
+      </div>
+    </header>
+    <main>
+      <div class="main-body-flex">
+        <div class="search-products">
+          <div class="search-container">
+            <form id="form">
+              <input
+                type="search"
+                id="searchInput"
+                name="s"
+                placeholder="Search products..."
+              />
+            </form>
+            <a>
+              <button
+                class="search-btn"
+                style="font-size: 24px; color: white"
+                onclick="findProducts()"
+              >
+                <i class="fa fa-caret-right"></i></button
+            ></a>
+          </div>
+
+          <div id="product-container"></div>
+          <div id="searchResults"></div>
+
+          <div id="productList"></div>
+
+          <div class="filter-by-price">
+            <div id="hiddenDiv">
+              <h3>Active filters</h3>
+              <p>PRICE:</p>
+              <div class="price-flex">
+                <span
+                  ><button id="close">
+                    <img
+                      src="C:\Users\DELL\Downloads\icons8-cancel.svg"
+                      width="14px"
+                      height="14px"
+                    />
+                  </button>
+                </span>
+                <span> <p>Up to £37.00</p> </span>
+              </div>
+              <button id="clear">Clear All</button>
+            </div>
+
+            <h2>Filter by price</h2>
+          </div>
+          <div class="range_container">
+            <div id="sliders_control">
+              <input
+                id="fromSlider"
+                type="range"
+                value="10"
+                min="10"
+                max="40"
+              />
+              <input id="toSlider" type="range" value="40" min="10" max="40" />
+            </div>
+            <div class="form_control">
+              <div class="form_control_container">
+                <div class="form_control_container__time">Min</div>
+                <input
+                  class="form_control_container__time__input"
+                  type="number"
+                  id="fromInput"
+                  value="10"
+                  min="10"
+                  max="40"
+                />
+              </div>
+              <div class="form_control_container">
+                <div class="form_control_container__time">Max</div>
+                <input
+                  class="form_control_container__time__input"
+                  type="number"
+                  id="toInput"
+                  value="40"
+                  min="10"
+                  max="40"
+                />
+              </div>
+            </div>
+            <div>
+              <button id="reset">Reset</button>
+            </div>
+          </div>
+          <p><a class="groceries" href="Groceries.html"> Groceries</a>(10)</p>
+
+          <div class="box-oil">
+            <a href="Naturally Extracted Olive Oil.html"
+              ><img
+                src="E:\Amber\practice-scripts\downloaded_pics\090642-1-1.webp"
+                width="250px"
+                height="250px"
+                alt="image"
+              />
+              <div class="sale"><p>Sale</p></div></a
+            ><a class="war4" href="Naturally Extracted Olive Oil.html"
+              >Naturally Extracted Olive Oil</a
+            >
+            <p><del>£34.00</del> <ins>£23.00</ins></p>
+          </div>
+          <div class="box-hand">
+            <a href="Hand Sanitizer.html"
+              ><img
+                src="E:\Amber\practice-scripts\downloaded_pics\download.jpg"
+                width="250px"
+                height="250px"
+                alt="image"
+              />
+            </a>
+            <a class="war2" href="Hand Sanitizer.html">Hand Sanitizer</a>
+            <p>£15.00</p>
+          </div>
+          <div class="box-coffee">
+            <a href="Assorted Coffee.html"
+              ><img
+                src="E:\Amber\practice-scripts\downloaded_pics\organic-side-new.webp"
+                width="250px"
+                height="250px"
+                alt="image"
+              /> </a
+            ><a class="war" href="Assorted Coffee.html">Assorted Coffee</a>
+            <p>£35.00</p>
+          </div>
+        </div>
+        <div class="search-results">
+          <p>
+            <a href="e-commerce.html">Home </a> /
+            <a href="Everything.html">Shop </a>/ Search results for “”
+          </p>
+          <h1>Search results:</h1>
+        </div>
+        <div class="card-container" id="loop"></div>
+      </div>
+    </main>
+
+    <script>
+      // Fetch data from the JSON file
+      var products = [];
+      async function fetchData() {
+        try {
+          const response = await fetch("MOCK_DATA.json");
+          if (!response.ok) {
+            throw new Error(`Failed to fetch data: ${response.status} `);
+          }
+          products = await response.json();
+          console.log("Fetched data:", products);
+          if (Array.isArray(products)) {
+            products.forEach((item) => {
+              console.log(item.price);
+            });
+            // Call the display function separately
+            displayCards(products);
+          } else {
+            throw new Error("Inside Error");
+          }
+        } catch (error) {
+          console.error("Catch Error:", error);
+        }
+      }
+
+      function findProducts() {
+        let searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        const findProds = products.find(
+          (a, b) => a.product_name.toLowerCase() == searchTerm
+        );
+
+        console.log(findProds, products);
+      }
+      function openProduct(element) {
+        console.log("calling", element.product_name);
+        localStorage.setItem("element", JSON.stringify(element));
+        window.open("product.html");
+      }
+      // Function to display products in card form
+      function displayCards(products) {
+        const cardContainer = document.getElementById("loop");
+        cardContainer.innerHTML = ""; // Clear previous content
+
+        products.forEach((element) => {
+          const card = document.createElement("div");
+          card.id = element.product_name;
+          card.className = "card";
+
+          card.innerHTML = `
+                  <img src="" alt="${element.product_name}">
+                  <h2>${element.product_name}</h2>
+                  <p>${element.description}</p>
+                  <button id="product-${element.product_name}">View Product</button>
+              `;
+
+          cardContainer.appendChild(card);
+
+          document
+            .getElementById(`product-${element.product_name}`)
+            .addEventListener("click", () => openProduct(element));
+        });
+      }
+
+      // Fetch data on page load
+      fetchData();
+    </script>
+
+    <script>
+      function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+        const [from, to] = getParsed(fromInput, toInput);
+        fillSlider(fromInput, toInput, "#C6C6C6", "#25daa5", controlSlider);
+        if (from > to) {
+          fromSlider.value = to;
+          fromInput.value = to;
+        } else {
+          fromSlider.value = from;
+        }
+      }
+
+      function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+        const [from, to] = getParsed(fromInput, toInput);
+        fillSlider(fromInput, toInput, "#C6C6C6", "#25daa5", controlSlider);
+        setToggleAccessible(toInput);
+        if (from <= to) {
+          toSlider.value = to;
+          toInput.value = to;
+        } else {
+          toInput.value = from;
+        }
+      }
+
+      function controlFromSlider(fromSlider, toSlider, fromInput) {
+        const [from, to] = getParsed(fromSlider, toSlider);
+        fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+        if (from > to) {
+          fromSlider.value = to;
+          fromInput.value = to;
+        } else {
+          fromInput.value = from;
+        }
+      }
+
+      function controlToSlider(fromSlider, toSlider, toInput) {
+        const [from, to] = getParsed(fromSlider, toSlider);
+        fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+        setToggleAccessible(toSlider);
+        if (from <= to) {
+          toSlider.value = to;
+          toInput.value = to;
+        } else {
+          toInput.value = from;
+          toSlider.value = from;
+        }
+      }
+
+      function getParsed(currentFrom, currentTo) {
+        const from = parseInt(currentFrom.value, 10);
+        const to = parseInt(currentTo.value, 10);
+        return [from, to];
+      }
+
+      function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+        const rangeDistance = to.max - to.min;
+        const fromPosition = from.value - to.min;
+        const toPosition = to.value - to.min;
+        controlSlider.style.background = `linear-gradient(
+          to right,
+          ${sliderColor} 0%,
+          ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
+          ${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
+          ${rangeColor} ${(toPosition / rangeDistance) * 100}%, 
+          ${sliderColor} ${(toPosition / rangeDistance) * 100}%, 
+          ${sliderColor} 100%)`;
+      }
+
+      function setToggleAccessible(currentTarget) {
+        const toSlider = document.querySelector("#toSlider");
+        if (Number(currentTarget.value) <= 0) {
+          toSlider.style.zIndex = 2;
+        } else {
+          toSlider.style.zIndex = 0;
+        }
+      }
+
+      const fromSlider = document.querySelector("#fromSlider");
+      const toSlider = document.querySelector("#toSlider");
+      const fromInput = document.querySelector("#fromInput");
+      const toInput = document.querySelector("#toInput");
+      fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+      setToggleAccessible(toSlider);
+
+      fromSlider.oninput = () =>
+        controlFromSlider(fromSlider, toSlider, fromInput);
+      toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+      fromInput.oninput = () =>
+        controlFromInput(fromSlider, fromInput, toInput, toSlider);
+      toInput.oninput = () =>
+        controlToInput(toSlider, fromInput, toInput, toSlider);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const sliders_control = document.getElementById("sliders_control");
+        const hiddenDiv = document.getElementById("hiddenDiv");
+        const close = document.getElementById("close");
+        const clear = document.getElementById("clear");
+        const reset = document.getElementById("reset");
+        sliders_control.addEventListener("input", () => {
+          hiddenDiv.style.display = "block";
+        });
+        sliders_control.addEventListener("input", () => {
+          reset.style.display = "block";
+        });
+        close.addEventListener("click", () => {
+          hiddenDiv.style.display = "none";
+        });
+        reset.addEventListener("click", () => {
+          hiddenDiv.style.display = "none";
+        });
+        reset.addEventListener("click", () => {
+          reset.style.display = "none";
+        });
+        clear.addEventListener("click", () => {
+          hiddenDiv.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
